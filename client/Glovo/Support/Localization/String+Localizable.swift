@@ -42,5 +42,12 @@ extension String {
                 static let title = "CITYLIST_LABEL_TITLE".localized
             }
         }
+        
+        //MARK: - CityInfo Module
+        enum CityInfo {
+            enum Label {
+                static let disabled = "CITYINFO_LABEL_DISABLED".localized
+            }
+        }
     }
 }

@@ -24,14 +24,13 @@ extension Router: CityListRouter {
     }
 
     func showCard(for city: City) {
-        if let mapViewController = mapViewController {
-            mapViewController.showWorkingArea(for: city)
-        } else
-        if let mapViewController = window.rootViewController as? MapViewController {
-            mapViewController.showWorkingArea(for: city)
+        let cityInfo = CityInfo.Builder.viewController(with: city)
+        if mapViewController == nil {
+            mapViewController = window.rootViewController as? MapViewController
         }
-        //TODO: Pending implementation
-        print("EP: CityInfo Module not ready yet")
+        mapViewController?.showWorkingArea(for: city)
+        mapViewController?.addCard(with: cityInfo)        
+        cityInfo.animateBottomCard()
     }
     
 }
