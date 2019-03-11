@@ -63,7 +63,6 @@ extension Router: MapRouter {
     }
     
     private func showBottomCard(with view: CardPresentable) {
-        print("showBottomCard(with:\(view)")
         mapViewController?.addCard(with: view)
         view.animateBottomCard()
     }

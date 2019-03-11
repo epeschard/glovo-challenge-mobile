@@ -30,7 +30,7 @@ protocol CardPresentable: UIGestureRecognizerDelegate, PanRecognizer {
 extension CardPresentable where Self: UIViewController {
     
     var midY: CGFloat {
-        return UIScreen.main.bounds.height - 150
+        return UIScreen.main.bounds.height - 200
     }
     
     var topY: CGFloat {
@@ -48,9 +48,7 @@ extension CardPresentable where Self: UIViewController {
     }
     
     func animateBottomCard() {
-        print("EP: CardPresentable - animateBottomCard")
         if view.traitCollection.horizontalSizeClass == .compact {
-            print("EP: CardPresentable - animateBottomCard - after trait")
             UIView.animate(withDuration: 0.6, animations: { [weak self] in
                 guard let frame = self?.view.frame, let y = self?.midY else { return }
                 self?.view.frame = CGRect(x: 0, y: y, width: frame.width, height: frame.height)

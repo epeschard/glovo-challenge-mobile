@@ -11,7 +11,6 @@ import RealmSwift
 
 protocol CityListViewController: CardPresentable {
     var presenter: CityListPresenter? { get set }
-//    var isHidden: Bool { get set }
 }
 
 extension CityList {

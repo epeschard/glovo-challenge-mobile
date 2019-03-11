@@ -133,15 +133,13 @@ extension Map {
 
 extension Map.ViewController: GMSMapViewDelegate {
     
-    func mapViewDidFinishTileRendering(_ mapView: GMSMapView) {
-        //TODO: Pending implementation
-    }
-    
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         if mapView.camera.zoom <= 10.0 && zoomLevel != .multiCity {
+            mapView.clear()
             zoomLevel = .multiCity
             showCityMarkers()
         } else if mapView.camera.zoom > 10.0 && zoomLevel != .monoCity {
+            mapView.clear()
             zoomLevel = .monoCity
             if let city = presenter?.getCity(at: position.target) {
                 presenter?.show(city)
@@ -150,7 +148,11 @@ extension Map.ViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        //TODO: Pending implementation
+        let realm = RealmProvider.glovo.realm
+        let cityCode = marker.snippet
+        if let city = realm.object(ofType: City.self, forPrimaryKey: cityCode) {
+            presenter?.show(city)
+        }
         return true
     }
     
