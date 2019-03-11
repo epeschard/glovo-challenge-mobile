@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9C54BA6722367F4A002E27DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA6622367F4A002E27DE /* AppDelegate.swift */; };
-		9C54BA6922367F4A002E27DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA6822367F4A002E27DE /* ViewController.swift */; };
-		9C54BA6C22367F4A002E27DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C54BA6A22367F4A002E27DE /* Main.storyboard */; };
 		9C54BA6E22367F4B002E27DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C54BA6D22367F4B002E27DE /* Assets.xcassets */; };
 		9C54BA7122367F4B002E27DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C54BA6F22367F4B002E27DE /* LaunchScreen.storyboard */; };
 		9C54BA7C22367F4B002E27DE /* GlovoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA7B22367F4B002E27DE /* GlovoTests.swift */; };
+		9C54BA87223684BC002E27DE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA86223684BC002E27DE /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +27,13 @@
 /* Begin PBXFileReference section */
 		9C54BA6322367F4A002E27DE /* Glovo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glovo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C54BA6622367F4A002E27DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C54BA6822367F4A002E27DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9C54BA6B22367F4A002E27DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C54BA6D22367F4B002E27DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C54BA7022367F4B002E27DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C54BA7222367F4B002E27DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C54BA7722367F4B002E27DE /* GlovoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlovoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C54BA7B22367F4B002E27DE /* GlovoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlovoTests.swift; sourceTree = "<group>"; };
 		9C54BA7D22367F4B002E27DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C54BA86223684BC002E27DE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				9C54BA6622367F4A002E27DE /* AppDelegate.swift */,
-				9C54BA6822367F4A002E27DE /* ViewController.swift */,
-				9C54BA6A22367F4A002E27DE /* Main.storyboard */,
+				9C54BA86223684BC002E27DE /* Router.swift */,
 				9C54BA6D22367F4B002E27DE /* Assets.xcassets */,
 				9C54BA6F22367F4B002E27DE /* LaunchScreen.storyboard */,
 				9C54BA7222367F4B002E27DE /* Info.plist */,
@@ -179,7 +176,6 @@
 			files = (
 				9C54BA7122367F4B002E27DE /* LaunchScreen.storyboard in Resources */,
 				9C54BA6E22367F4B002E27DE /* Assets.xcassets in Resources */,
-				9C54BA6C22367F4A002E27DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C54BA6922367F4A002E27DE /* ViewController.swift in Sources */,
+				9C54BA87223684BC002E27DE /* Router.swift in Sources */,
 				9C54BA6722367F4A002E27DE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,14 +217,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9C54BA6A22367F4A002E27DE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C54BA6B22367F4A002E27DE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9C54BA6F22367F4B002E27DE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
