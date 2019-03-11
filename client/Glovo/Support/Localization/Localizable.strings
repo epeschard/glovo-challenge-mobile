@@ -11,3 +11,10 @@
 
 "MAP_ALERT_TITLE" = "Failed updating location";
 "MAP_ALERT_OK" = "OK";
+
+//MARK: - LocationManager
+"LOCATION_ACCESS_TITLE" = "Can't get your location";
+"LOCATION_ACCESS_RESTRICTED" = "This app is not authorized to use location services.";
+
+//MARK: - CityList Module
+"CITYLIST_LABEL_TITLE" = "Pick a city";

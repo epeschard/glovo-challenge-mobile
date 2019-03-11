@@ -12,6 +12,18 @@
 		9C54BA7122367F4B002E27DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C54BA6F22367F4B002E27DE /* LaunchScreen.storyboard */; };
 		9C54BA7C22367F4B002E27DE /* GlovoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA7B22367F4B002E27DE /* GlovoTests.swift */; };
 		9C54BA87223684BC002E27DE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA86223684BC002E27DE /* Router.swift */; };
+		9CA0AE2D2236CB9000622941 /* CityList.Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE262236CB8F00622941 /* CityList.Entity.swift */; };
+		9CA0AE2E2236CB9000622941 /* CityList.Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE272236CB8F00622941 /* CityList.Builder.swift */; };
+		9CA0AE2F2236CB9000622941 /* CityList.Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE282236CB8F00622941 /* CityList.Interactor.swift */; };
+		9CA0AE302236CB9000622941 /* CityList.Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE292236CB8F00622941 /* CityList.Cell.swift */; };
+		9CA0AE312236CB9000622941 /* CityList.ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE2A2236CB9000622941 /* CityList.ViewController.swift */; };
+		9CA0AE322236CB9000622941 /* CityList.Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE2B2236CB9000622941 /* CityList.Router.swift */; };
+		9CA0AE332236CB9000622941 /* CityList.Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE2C2236CB9000622941 /* CityList.Presenter.swift */; };
+		9CA0AE362236CBF700622941 /* CardPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE342236CBF700622941 /* CardPresentable.swift */; };
+		9CA0AE372236CBF700622941 /* CardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE352236CBF700622941 /* CardPresenter.swift */; };
+		9CA0AE392236CCE500622941 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE382236CCE500622941 /* UIView+Ext.swift */; };
+		9CA0AE3B2236D17400622941 /* ReusableID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE3A2236D17400622941 /* ReusableID.swift */; };
+		9CA0AE3D2236F1E000622941 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE3C2236F1E000622941 /* UIColor+Ext.swift */; };
 		9CC290B32236AD9100279F90 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290B22236AD9100279F90 /* Path.swift */; };
 		9CC290B52236ADB700279F90 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290B42236ADB700279F90 /* Constants.swift */; };
 		9CC290B82236AE9C00279F90 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290B72236AE9C00279F90 /* RealmProvider.swift */; };
@@ -60,6 +72,18 @@
 		9C54BA7B22367F4B002E27DE /* GlovoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlovoTests.swift; sourceTree = "<group>"; };
 		9C54BA7D22367F4B002E27DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C54BA86223684BC002E27DE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9CA0AE262236CB8F00622941 /* CityList.Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityList.Entity.swift; sourceTree = "<group>"; };
+		9CA0AE272236CB8F00622941 /* CityList.Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityList.Builder.swift; sourceTree = "<group>"; };
+		9CA0AE282236CB8F00622941 /* CityList.Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityList.Interactor.swift; sourceTree = "<group>"; };
+		9CA0AE292236CB8F00622941 /* CityList.Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityList.Cell.swift; sourceTree = "<group>"; };
+		9CA0AE2A2236CB9000622941 /* CityList.ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityList.ViewController.swift; sourceTree = "<group>"; };
+		9CA0AE2B2236CB9000622941 /* CityList.Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityList.Router.swift; sourceTree = "<group>"; };
+		9CA0AE2C2236CB9000622941 /* CityList.Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityList.Presenter.swift; sourceTree = "<group>"; };
+		9CA0AE342236CBF700622941 /* CardPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPresentable.swift; sourceTree = "<group>"; };
+		9CA0AE352236CBF700622941 /* CardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPresenter.swift; sourceTree = "<group>"; };
+		9CA0AE382236CCE500622941 /* UIView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		9CA0AE3A2236D17400622941 /* ReusableID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableID.swift; sourceTree = "<group>"; };
+		9CA0AE3C2236F1E000622941 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		9CC290AF2236A59A00279F90 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9CC290B02236A5A700279F90 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		9CC290B22236AD9100279F90 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
@@ -167,6 +191,20 @@
 			path = GlovoTests;
 			sourceTree = "<group>";
 		};
+		9CA0AE252236CB4D00622941 /* CityList */ = {
+			isa = PBXGroup;
+			children = (
+				9CA0AE272236CB8F00622941 /* CityList.Builder.swift */,
+				9CA0AE292236CB8F00622941 /* CityList.Cell.swift */,
+				9CA0AE262236CB8F00622941 /* CityList.Entity.swift */,
+				9CA0AE282236CB8F00622941 /* CityList.Interactor.swift */,
+				9CA0AE2C2236CB9000622941 /* CityList.Presenter.swift */,
+				9CA0AE2B2236CB9000622941 /* CityList.Router.swift */,
+				9CA0AE2A2236CB9000622941 /* CityList.ViewController.swift */,
+			);
+			path = CityList;
+			sourceTree = "<group>";
+		};
 		9CC290AC2236A56000279F90 /* Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +279,8 @@
 		9CC290D02236B49900279F90 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9CA0AE3C2236F1E000622941 /* UIColor+Ext.swift */,
+				9CA0AE382236CCE500622941 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,6 +288,7 @@
 		9CC290D22236B4DF00279F90 /* View Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9CA0AE252236CB4D00622941 /* CityList */,
 				9CC290D32236B4EC00279F90 /* Map */,
 			);
 			path = "View Scenes";
@@ -269,6 +310,9 @@
 		9CC290E02236B86E00279F90 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				9CA0AE342236CBF700622941 /* CardPresentable.swift */,
+				9CA0AE352236CBF700622941 /* CardPresenter.swift */,
+				9CA0AE3A2236D17400622941 /* ReusableID.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -482,26 +526,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA0AE2D2236CB9000622941 /* CityList.Entity.swift in Sources */,
 				9C54BA87223684BC002E27DE /* Router.swift in Sources */,
+				9CA0AE392236CCE500622941 /* UIView+Ext.swift in Sources */,
 				9CC290B32236AD9100279F90 /* Path.swift in Sources */,
 				9CC290CF2236B0D800279F90 /* City.swift in Sources */,
+				9CA0AE3D2236F1E000622941 /* UIColor+Ext.swift in Sources */,
 				9CC290D52236B4FF00279F90 /* Map.ViewController.swift in Sources */,
 				9CC290DB2236B78400279F90 /* Map.Entity.swift in Sources */,
 				9CC290DF2236B7BF00279F90 /* Map.Builder.swift in Sources */,
 				9CC290D72236B63000279F90 /* Map.Interactor.swift in Sources */,
 				9CC290D92236B6C200279F90 /* Map.Presenter.swift in Sources */,
+				9CA0AE302236CB9000622941 /* CityList.Cell.swift in Sources */,
 				9CC290BF2236AF1A00279F90 /* Endpoint.swift in Sources */,
+				9CA0AE2F2236CB9000622941 /* CityList.Interactor.swift in Sources */,
 				9CC290C32236AF5300279F90 /* GlovoAPIClient.swift in Sources */,
+				9CA0AE372236CBF700622941 /* CardPresenter.swift in Sources */,
 				9C54BA6722367F4A002E27DE /* AppDelegate.swift in Sources */,
 				9CC290BD2236AEFD00279F90 /* Environment.swift in Sources */,
 				9CC290B52236ADB700279F90 /* Constants.swift in Sources */,
 				9CC290DD2236B79A00279F90 /* Map.Router.swift in Sources */,
+				9CA0AE332236CB9000622941 /* CityList.Presenter.swift in Sources */,
 				9CC290E92236BAC800279F90 /* Typealias.swift in Sources */,
+				9CA0AE3B2236D17400622941 /* ReusableID.swift in Sources */,
+				9CA0AE312236CB9000622941 /* CityList.ViewController.swift in Sources */,
 				9CC290CD2236B0BF00279F90 /* Country.swift in Sources */,
+				9CA0AE2E2236CB9000622941 /* CityList.Builder.swift in Sources */,
 				9CC290B82236AE9C00279F90 /* RealmProvider.swift in Sources */,
+				9CA0AE322236CB9000622941 /* CityList.Router.swift in Sources */,
 				9CC290C12236AF3000279F90 /* Request.swift in Sources */,
 				9CC290BB2236AECE00279F90 /* APIClient.swift in Sources */,
 				9CC290E32236B95C00279F90 /* String+Localizable.swift in Sources */,
+				9CA0AE362236CBF700622941 /* CardPresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

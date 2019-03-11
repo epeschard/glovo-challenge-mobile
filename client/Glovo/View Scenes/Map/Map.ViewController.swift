@@ -8,14 +8,16 @@
 
 import UIKit
 import GoogleMaps
+import RealmSwift
 
-protocol MapViewController: class {
+protocol MapViewController: CardPresenter {
     var presenter: MapPresenter? { get set }
     var mapView: GMSMapView! { get set }
     
     func animateMap(to coordinate: CLLocationCoordinate2D, zoom level: Float)
     func addMapMarker(with title: String, and snippet: String, at center: CLLocationCoordinate2D?)
-    func show(_ city: City)
+    func showWorkingArea(for city: City)
+    func showCityMarkers()
 }
 
 extension Map {
@@ -23,6 +25,15 @@ extension Map {
         
         var presenter: MapPresenter?
         var mapView: GMSMapView!
+        
+        enum ZoomLevel: Int {
+            case monoCity
+            case multiCity
+        }
+        var zoomLevel: ZoomLevel = .monoCity
+        
+        private var cities = City.all()
+        private var token: NotificationToken?
         
         //MARK: - Initializers
         
@@ -41,9 +52,29 @@ extension Map {
             setupMapView()
         }
         
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            
+            let realm = RealmProvider.glovo.realm
+            token = realm.observe { [weak self] notification, realm in
+                guard let self = self else { return }
+                
+                if let point = self.mapView.myLocation?.coordinate,
+                    let city = self.presenter?.getCity(at: point) {
+                    self.presenter?.show(city)
+                    self.showWorkingArea(for: city)
+                }
+            }
+        }
+        
         override func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)
             presenter?.checkLocationServices()
+        }
+        
+        override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            token?.invalidate()
         }
         
         //MARK: - Private - loadView
@@ -58,15 +89,42 @@ extension Map {
         //MARK: - MapViewController
         
         func animateMap(to coordinate: CLLocationCoordinate2D, zoom level: Float) {
-            //TODO: Pending implementation
+            let position = GMSCameraPosition.camera(withTarget: coordinate, zoom: level)
+            mapView?.animate(to: position)
         }
         
         func addMapMarker(with title: String, and snippet: String, at center: CLLocationCoordinate2D?) {
-            //TODO: Pending implementation
+            guard let center = center else { return }
+            let marker = GMSMarker(position: center)
+            marker.snippet = snippet
+            marker.title = title
+            marker.map = mapView
+            marker.icon = #imageLiteral(resourceName: "Glovo_shape.pdf")
         }
         
-        func show(_ city: City) {
-            //TODO: Pending implementation
+        func showWorkingArea(for city: City) {
+            if let cityArea = city.bounds {
+                let zoomUpdate = GMSCameraUpdate.fit(cityArea, withPadding: 8.0)
+                mapView.animate(with: zoomUpdate)
+                showPolygon(for: city)
+            }
+        }
+        
+        private func showPolygon(for city: City) {
+            mapView.clear()
+            for workingArea in city.working_area {
+                guard let path = GMSPath(fromEncodedPath: workingArea) else { continue }
+                let polygon = GMSPolygon(path: path)
+                polygon.fillColor = GlovoColor.yellow.withAlphaComponent(0.4)
+                polygon.isTappable = false
+                polygon.map = mapView
+            }
+        }
+        
+        func showCityMarkers() {
+            for city in self.cities {
+                self.addMapMarker(with: city.name, and: city.code, at: city.center)
+            }
         }
     }
 }
@@ -80,7 +138,15 @@ extension Map.ViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        //TODO: Pending implementation
+        if mapView.camera.zoom <= 10.0 && zoomLevel != .multiCity {
+            zoomLevel = .multiCity
+            showCityMarkers()
+        } else if mapView.camera.zoom > 10.0 && zoomLevel != .monoCity {
+            zoomLevel = .monoCity
+            if let city = presenter?.getCity(at: position.target) {
+                presenter?.show(city)
+            }
+        }
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {

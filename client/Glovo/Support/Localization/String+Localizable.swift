@@ -27,5 +27,20 @@ extension String {
                 static let ok = "MAP_ALERT_OK".localized
             }
         }
+        
+        //MARK: - LocationManager
+        enum Location {
+            enum Access {
+                static let title = "LOCATION_ACCESS_TITLE".localized
+                static let restricted = "LOCATION_ACCESS_RESTRICTED".localized
+            }
+        }
+        
+        //MARK: - CityList Module
+        enum CityList {
+            enum Label {
+                static let title = "CITYLIST_LABEL_TITLE".localized
+            }
+        }
     }
 }

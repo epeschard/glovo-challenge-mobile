@@ -1,5 +1,5 @@
 //
-//  Map.Builder.swift
+//  CityList.Builder.swift
 //  Glovo
 //
 //  Created by Eugène Peschard on 11/03/2019.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum Map {
+enum CityList {
     class Builder {
         
         static func viewController(for window: UIWindow) -> ViewController {
@@ -26,9 +26,8 @@ enum Map {
             presenter.view = viewController
             presenter.router = router
             
-            router.mapPresenter = presenter
-            router.mapViewController = viewController
-            router.cardPresenter = viewController
+            router.cityListPresenter = presenter
+            router.cityListViewController = viewController
             
             return viewController
         }

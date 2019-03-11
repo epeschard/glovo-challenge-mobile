@@ -12,6 +12,7 @@ import UIKit
 protocol MapRouter {
     var mapPresenter: MapPresenter? { get set }
     var mapViewController: MapViewController? { get set }
+    var cardPresenter: CardPresenter? { get set }
     
     func showMapView(on window: UIWindow)
     func presentAlert(
@@ -35,7 +36,10 @@ extension Router: MapRouter {
     func presentAlert(from view: UIViewController, with title: String, and message: String, using style: UIAlertController.Style, and actions: [UIAlertAction]) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         _ = actions.map { alert.addAction($0) }
-        view.present(alert, animated: true, completion: nil)
+        view.present(alert, animated: true) {
+            [weak self] in
+            self?.showManualCityPicker()
+        }
     }
     
     @objc private func openSettings() {
@@ -46,10 +50,21 @@ extension Router: MapRouter {
     }
     
     func show(_ city: City) {
-        //TODO: Pending implementation
+        showCard(for: city)
     }
     
     func showManualCityPicker() {
-        //TODO: Pending implementation
+        if let cityList = cityListViewController {
+            showBottomCard(with: cityList)
+        } else {
+            let cityList = CityList.Builder.viewController(for: window)
+            showBottomCard(with: cityList)
+        }
+    }
+    
+    private func showBottomCard(with view: CardPresentable) {
+        print("showBottomCard(with:\(view)")
+        mapViewController?.addCard(with: view)
+        view.animateBottomCard()
     }
 }
