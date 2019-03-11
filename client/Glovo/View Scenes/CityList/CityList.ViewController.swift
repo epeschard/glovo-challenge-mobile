@@ -213,16 +213,3 @@ extension CityList.ViewController: UITableViewDelegate {
         isHidden = true
     }
 }
-
-////MARK: - CardDelegate
-//
-//extension CityList.ViewController: CardDelegate {
-//
-//    func showCard() {
-//        UIView.animate(withDuration: 0.6, animations: { [weak self] in
-//            guard let frame = self?.view.frame, let y = self?.partialView else { return }
-//            self?.view.frame = CGRect(x: 0, y: y, width: frame.width, height: frame.height)
-//        })
-//    }
-//
-//}

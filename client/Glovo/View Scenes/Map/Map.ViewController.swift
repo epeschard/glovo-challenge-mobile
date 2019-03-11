@@ -115,7 +115,7 @@ extension Map {
             for workingArea in city.working_area {
                 guard let path = GMSPath(fromEncodedPath: workingArea) else { continue }
                 let polygon = GMSPolygon(path: path)
-                polygon.fillColor = GlovoColor.yellow.withAlphaComponent(0.4)
+                polygon.fillColor = UIColor(white: 0.3, alpha: 0.4)
                 polygon.isTappable = false
                 polygon.map = mapView
             }
