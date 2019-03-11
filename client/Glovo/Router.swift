@@ -21,18 +21,14 @@ class Router {
     }
     
     private func showStartView() {
-        showRedView()
+        showMapView(on: window)
     }
     
     func show(_ view: UIViewController) {
         window.rootViewController = view
     }
-}
-
-extension Router {
-    func showRedView() {
-        let redController = UIViewController()
-        redController.view.backgroundColor = .red
-        show(redController)
-    }
+    
+    //MARK: - MapRouter
+    weak var mapPresenter: MapPresenter?
+    weak var mapViewController: MapViewController?
 }

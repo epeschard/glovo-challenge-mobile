@@ -12,6 +12,17 @@
 		9C54BA7122367F4B002E27DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C54BA6F22367F4B002E27DE /* LaunchScreen.storyboard */; };
 		9C54BA7C22367F4B002E27DE /* GlovoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA7B22367F4B002E27DE /* GlovoTests.swift */; };
 		9C54BA87223684BC002E27DE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA86223684BC002E27DE /* Router.swift */; };
+		9CC290B52236ADB700279F90 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290B42236ADB700279F90 /* Constants.swift */; };
+		9CC290D52236B4FF00279F90 /* Map.ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290D42236B4FF00279F90 /* Map.ViewController.swift */; };
+		9CC290D72236B63000279F90 /* Map.Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290D62236B63000279F90 /* Map.Interactor.swift */; };
+		9CC290D92236B6C200279F90 /* Map.Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290D82236B6C200279F90 /* Map.Presenter.swift */; };
+		9CC290DB2236B78400279F90 /* Map.Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290DA2236B78400279F90 /* Map.Entity.swift */; };
+		9CC290DD2236B79A00279F90 /* Map.Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290DC2236B79A00279F90 /* Map.Router.swift */; };
+		9CC290DF2236B7BF00279F90 /* Map.Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290DE2236B7BF00279F90 /* Map.Builder.swift */; };
+		9CC290E32236B95C00279F90 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290E22236B95C00279F90 /* String+Localizable.swift */; };
+		9CC290E52236B99700279F90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CC290E42236B99700279F90 /* Localizable.strings */; };
+		9CC290E72236B9BA00279F90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CC290E62236B9BA00279F90 /* InfoPlist.strings */; };
+		9CC290E92236BAC800279F90 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290E82236BAC800279F90 /* Typealias.swift */; };
 		A00EF443651ED4993D758CBD /* Pods_GlovoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4BCE2DA48652D9D8C4AD18 /* Pods_GlovoTests.framework */; };
 		F3468355D1B752AFC537ACE8 /* Pods_Glovo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCB1FC197F0B6A294C96542 /* Pods_Glovo.framework */; };
 /* End PBXBuildFile section */
@@ -39,6 +50,17 @@
 		9C54BA86223684BC002E27DE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9CC290AF2236A59A00279F90 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9CC290B02236A5A700279F90 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		9CC290B42236ADB700279F90 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9CC290D42236B4FF00279F90 /* Map.ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.ViewController.swift; sourceTree = "<group>"; };
+		9CC290D62236B63000279F90 /* Map.Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.Interactor.swift; sourceTree = "<group>"; };
+		9CC290D82236B6C200279F90 /* Map.Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.Presenter.swift; sourceTree = "<group>"; };
+		9CC290DA2236B78400279F90 /* Map.Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.Entity.swift; sourceTree = "<group>"; };
+		9CC290DC2236B79A00279F90 /* Map.Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.Router.swift; sourceTree = "<group>"; };
+		9CC290DE2236B7BF00279F90 /* Map.Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.Builder.swift; sourceTree = "<group>"; };
+		9CC290E22236B95C00279F90 /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		9CC290E42236B99700279F90 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9CC290E62236B9BA00279F90 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		9CC290E82236BAC800279F90 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		9DBA1E8F770F51C178AE42A8 /* Pods-GlovoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlovoTests/Pods-GlovoTests.release.xcconfig"; sourceTree = "<group>"; };
 		ACCB1FC197F0B6A294C96542 /* Pods_Glovo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glovo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA59336280E6815F8D35A204 /* Pods-GlovoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlovoTests/Pods-GlovoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,9 +120,13 @@
 		9C54BA6522367F4A002E27DE /* Glovo */ = {
 			isa = PBXGroup;
 			children = (
-				9CC290AC2236A56000279F90 /* Support */,
-				9C54BA6622367F4A002E27DE /* AppDelegate.swift */,
+				9CC290D22236B4DF00279F90 /* View Scenes */,
+				9CC290B12236AD7A00279F90 /* Interactor */,
+				9CC290E02236B86E00279F90 /* Protocols */,
+				9CC290CB2236B0A700279F90 /* Entities */,
 				9C54BA86223684BC002E27DE /* Router.swift */,
+				9C54BA6622367F4A002E27DE /* AppDelegate.swift */,
+				9CC290AC2236A56000279F90 /* Support */,
 			);
 			path = Glovo;
 			sourceTree = "<group>";
@@ -117,9 +143,13 @@
 		9CC290AC2236A56000279F90 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				9CC290E12236B94400279F90 /* Localization */,
+				9CC290D02236B49900279F90 /* Extensions */,
 				9CC290AE2236A58800279F90 /* Configs */,
 				9C54BA7222367F4B002E27DE /* Info.plist */,
 				9CC290AD2236A56900279F90 /* Resources */,
+				9CC290B42236ADB700279F90 /* Constants.swift */,
+				9CC290E82236BAC800279F90 /* Typealias.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -140,6 +170,44 @@
 				9CC290B02236A5A700279F90 /* Release.xcconfig */,
 			);
 			path = Configs;
+			sourceTree = "<group>";
+		};
+		9CC290D22236B4DF00279F90 /* View Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9CC290D32236B4EC00279F90 /* Map */,
+			);
+			path = "View Scenes";
+			sourceTree = "<group>";
+		};
+		9CC290D32236B4EC00279F90 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9CC290D42236B4FF00279F90 /* Map.ViewController.swift */,
+				9CC290D62236B63000279F90 /* Map.Interactor.swift */,
+				9CC290D82236B6C200279F90 /* Map.Presenter.swift */,
+				9CC290DA2236B78400279F90 /* Map.Entity.swift */,
+				9CC290DC2236B79A00279F90 /* Map.Router.swift */,
+				9CC290DE2236B7BF00279F90 /* Map.Builder.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		9CC290E02236B86E00279F90 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9CC290E12236B94400279F90 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				9CC290E22236B95C00279F90 /* String+Localizable.swift */,
+				9CC290E42236B99700279F90 /* Localizable.strings */,
+				9CC290E62236B9BA00279F90 /* InfoPlist.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		E8892593DC4A7E93036EAD4B /* Pods */ = {
@@ -207,6 +275,11 @@
 				TargetAttributes = {
 					9C54BA6222367F4A002E27DE = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					9C54BA7622367F4B002E27DE = {
 						CreatedOnToolsVersion = 10.1;
@@ -239,6 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C54BA7122367F4B002E27DE /* LaunchScreen.storyboard in Resources */,
+				9CC290E72236B9BA00279F90 /* InfoPlist.strings in Resources */,
+				9CC290E52236B99700279F90 /* Localizable.strings in Resources */,
 				9C54BA6E22367F4B002E27DE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +410,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C54BA87223684BC002E27DE /* Router.swift in Sources */,
+				9CC290D52236B4FF00279F90 /* Map.ViewController.swift in Sources */,
+				9CC290DB2236B78400279F90 /* Map.Entity.swift in Sources */,
+				9CC290DF2236B7BF00279F90 /* Map.Builder.swift in Sources */,
+				9CC290D72236B63000279F90 /* Map.Interactor.swift in Sources */,
+				9CC290D92236B6C200279F90 /* Map.Presenter.swift in Sources */,
 				9C54BA6722367F4A002E27DE /* AppDelegate.swift in Sources */,
+				9CC290B52236ADB700279F90 /* Constants.swift in Sources */,
+				9CC290DD2236B79A00279F90 /* Map.Router.swift in Sources */,
+				9CC290E92236BAC800279F90 /* Typealias.swift in Sources */,
+				9CC290E32236B95C00279F90 /* String+Localizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
