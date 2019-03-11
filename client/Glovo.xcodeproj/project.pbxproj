@@ -13,6 +13,8 @@
 		9C54BA7C22367F4B002E27DE /* GlovoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA7B22367F4B002E27DE /* GlovoTests.swift */; };
 		9C54BA87223684BC002E27DE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA86223684BC002E27DE /* Router.swift */; };
 		9CC290B52236ADB700279F90 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290B42236ADB700279F90 /* Constants.swift */; };
+		9CC290CD2236B0BF00279F90 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290CC2236B0BF00279F90 /* Country.swift */; };
+		9CC290CF2236B0D800279F90 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290CE2236B0D800279F90 /* City.swift */; };
 		9CC290D52236B4FF00279F90 /* Map.ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290D42236B4FF00279F90 /* Map.ViewController.swift */; };
 		9CC290D72236B63000279F90 /* Map.Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290D62236B63000279F90 /* Map.Interactor.swift */; };
 		9CC290D92236B6C200279F90 /* Map.Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290D82236B6C200279F90 /* Map.Presenter.swift */; };
@@ -51,6 +53,8 @@
 		9CC290AF2236A59A00279F90 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9CC290B02236A5A700279F90 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		9CC290B42236ADB700279F90 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9CC290CC2236B0BF00279F90 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		9CC290CE2236B0D800279F90 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		9CC290D42236B4FF00279F90 /* Map.ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.ViewController.swift; sourceTree = "<group>"; };
 		9CC290D62236B63000279F90 /* Map.Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.Interactor.swift; sourceTree = "<group>"; };
 		9CC290D82236B6C200279F90 /* Map.Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.Presenter.swift; sourceTree = "<group>"; };
@@ -170,6 +174,15 @@
 				9CC290B02236A5A700279F90 /* Release.xcconfig */,
 			);
 			path = Configs;
+			sourceTree = "<group>";
+		};
+		9CC290CB2236B0A700279F90 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9CC290CC2236B0BF00279F90 /* Country.swift */,
+				9CC290CE2236B0D800279F90 /* City.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		9CC290D22236B4DF00279F90 /* View Scenes */ = {
@@ -410,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C54BA87223684BC002E27DE /* Router.swift in Sources */,
+				9CC290CF2236B0D800279F90 /* City.swift in Sources */,
 				9CC290D52236B4FF00279F90 /* Map.ViewController.swift in Sources */,
 				9CC290DB2236B78400279F90 /* Map.Entity.swift in Sources */,
 				9CC290DF2236B7BF00279F90 /* Map.Builder.swift in Sources */,
@@ -419,6 +433,7 @@
 				9CC290B52236ADB700279F90 /* Constants.swift in Sources */,
 				9CC290DD2236B79A00279F90 /* Map.Router.swift in Sources */,
 				9CC290E92236BAC800279F90 /* Typealias.swift in Sources */,
+				9CC290CD2236B0BF00279F90 /* Country.swift in Sources */,
 				9CC290E32236B95C00279F90 /* String+Localizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
