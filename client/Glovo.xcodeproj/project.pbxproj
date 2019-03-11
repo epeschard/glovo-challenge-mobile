@@ -12,6 +12,8 @@
 		9C54BA7122367F4B002E27DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C54BA6F22367F4B002E27DE /* LaunchScreen.storyboard */; };
 		9C54BA7C22367F4B002E27DE /* GlovoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA7B22367F4B002E27DE /* GlovoTests.swift */; };
 		9C54BA87223684BC002E27DE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA86223684BC002E27DE /* Router.swift */; };
+		A00EF443651ED4993D758CBD /* Pods_GlovoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4BCE2DA48652D9D8C4AD18 /* Pods_GlovoTests.framework */; };
+		F3468355D1B752AFC537ACE8 /* Pods_Glovo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCB1FC197F0B6A294C96542 /* Pods_Glovo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12589E117F56601277CEA1A2 /* Pods-Glovo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glovo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Glovo/Pods-Glovo.release.xcconfig"; sourceTree = "<group>"; };
 		9C54BA6322367F4A002E27DE /* Glovo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glovo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C54BA6622367F4A002E27DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C54BA6D22367F4B002E27DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +37,11 @@
 		9C54BA7B22367F4B002E27DE /* GlovoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlovoTests.swift; sourceTree = "<group>"; };
 		9C54BA7D22367F4B002E27DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C54BA86223684BC002E27DE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9DBA1E8F770F51C178AE42A8 /* Pods-GlovoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlovoTests/Pods-GlovoTests.release.xcconfig"; sourceTree = "<group>"; };
+		ACCB1FC197F0B6A294C96542 /* Pods_Glovo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glovo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA59336280E6815F8D35A204 /* Pods-GlovoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlovoTests/Pods-GlovoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF4BCE2DA48652D9D8C4AD18 /* Pods_GlovoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlovoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2DE0A03F2F841A495183C1B /* Pods-Glovo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glovo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Glovo/Pods-Glovo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3468355D1B752AFC537ACE8 /* Pods_Glovo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,18 +57,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00EF443651ED4993D758CBD /* Pods_GlovoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		597AEA4D3B435987AF8D402C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACCB1FC197F0B6A294C96542 /* Pods_Glovo.framework */,
+				EF4BCE2DA48652D9D8C4AD18 /* Pods_GlovoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C54BA5A22367F4A002E27DE = {
 			isa = PBXGroup;
 			children = (
 				9C54BA6522367F4A002E27DE /* Glovo */,
 				9C54BA7A22367F4B002E27DE /* GlovoTests */,
 				9C54BA6422367F4A002E27DE /* Products */,
+				E8892593DC4A7E93036EAD4B /* Pods */,
+				597AEA4D3B435987AF8D402C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +114,17 @@
 			path = GlovoTests;
 			sourceTree = "<group>";
 		};
+		E8892593DC4A7E93036EAD4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2DE0A03F2F841A495183C1B /* Pods-Glovo.debug.xcconfig */,
+				12589E117F56601277CEA1A2 /* Pods-Glovo.release.xcconfig */,
+				BA59336280E6815F8D35A204 /* Pods-GlovoTests.debug.xcconfig */,
+				9DBA1E8F770F51C178AE42A8 /* Pods-GlovoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,9 +132,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C54BA8022367F4B002E27DE /* Build configuration list for PBXNativeTarget "Glovo" */;
 			buildPhases = (
+				B4B8111BBDC981860E3F7B2F /* [CP] Check Pods Manifest.lock */,
 				9C54BA5F22367F4A002E27DE /* Sources */,
 				9C54BA6022367F4A002E27DE /* Frameworks */,
 				9C54BA6122367F4A002E27DE /* Resources */,
+				E0BB8BB8E482B74D2E7FC786 /* [CP] Embed Pods Frameworks */,
+				5EF5E77012D99FC19C26BEF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -117,6 +152,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C54BA8322367F4B002E27DE /* Build configuration list for PBXNativeTarget "GlovoTests" */;
 			buildPhases = (
+				F3C24BA4C9202A8ECEE4F61E /* [CP] Check Pods Manifest.lock */,
 				9C54BA7322367F4B002E27DE /* Sources */,
 				9C54BA7422367F4B002E27DE /* Frameworks */,
 				9C54BA7522367F4B002E27DE /* Resources */,
@@ -187,6 +223,83 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EF5E77012D99FC19C26BEF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Glovo/Pods-Glovo-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Glovo/Pods-Glovo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4B8111BBDC981860E3F7B2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Glovo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0BB8BB8E482B74D2E7FC786 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Glovo/Pods-Glovo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Glovo/Pods-Glovo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3C24BA4C9202A8ECEE4F61E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GlovoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C54BA5F22367F4A002E27DE /* Sources */ = {
@@ -346,6 +459,7 @@
 		};
 		9C54BA8122367F4B002E27DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2DE0A03F2F841A495183C1B /* Pods-Glovo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -364,6 +478,7 @@
 		};
 		9C54BA8222367F4B002E27DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12589E117F56601277CEA1A2 /* Pods-Glovo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,6 +497,7 @@
 		};
 		9C54BA8422367F4B002E27DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA59336280E6815F8D35A204 /* Pods-GlovoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -403,6 +519,7 @@
 		};
 		9C54BA8522367F4B002E27DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DBA1E8F770F51C178AE42A8 /* Pods-GlovoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
