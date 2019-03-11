@@ -37,6 +37,8 @@
 		9C54BA7B22367F4B002E27DE /* GlovoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlovoTests.swift; sourceTree = "<group>"; };
 		9C54BA7D22367F4B002E27DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C54BA86223684BC002E27DE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9CC290AF2236A59A00279F90 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		9CC290B02236A5A700279F90 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		9DBA1E8F770F51C178AE42A8 /* Pods-GlovoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlovoTests/Pods-GlovoTests.release.xcconfig"; sourceTree = "<group>"; };
 		ACCB1FC197F0B6A294C96542 /* Pods_Glovo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glovo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA59336280E6815F8D35A204 /* Pods-GlovoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlovoTests/Pods-GlovoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,11 +98,9 @@
 		9C54BA6522367F4A002E27DE /* Glovo */ = {
 			isa = PBXGroup;
 			children = (
+				9CC290AC2236A56000279F90 /* Support */,
 				9C54BA6622367F4A002E27DE /* AppDelegate.swift */,
 				9C54BA86223684BC002E27DE /* Router.swift */,
-				9C54BA6D22367F4B002E27DE /* Assets.xcassets */,
-				9C54BA6F22367F4B002E27DE /* LaunchScreen.storyboard */,
-				9C54BA7222367F4B002E27DE /* Info.plist */,
 			);
 			path = Glovo;
 			sourceTree = "<group>";
@@ -112,6 +112,34 @@
 				9C54BA7D22367F4B002E27DE /* Info.plist */,
 			);
 			path = GlovoTests;
+			sourceTree = "<group>";
+		};
+		9CC290AC2236A56000279F90 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				9CC290AE2236A58800279F90 /* Configs */,
+				9C54BA7222367F4B002E27DE /* Info.plist */,
+				9CC290AD2236A56900279F90 /* Resources */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		9CC290AD2236A56900279F90 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C54BA6D22367F4B002E27DE /* Assets.xcassets */,
+				9C54BA6F22367F4B002E27DE /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9CC290AE2236A58800279F90 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				9CC290AF2236A59A00279F90 /* Debug.xcconfig */,
+				9CC290B02236A5A700279F90 /* Release.xcconfig */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 		E8892593DC4A7E93036EAD4B /* Pods */ = {
@@ -459,17 +487,15 @@
 		};
 		9C54BA8122367F4B002E27DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2DE0A03F2F841A495183C1B /* Pods-Glovo.debug.xcconfig */;
+			baseConfigurationReference = 9CC290AF2236A59A00279F90 /* Debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76898M8GJ2;
-				INFOPLIST_FILE = Glovo/Info.plist;
+				INFOPLIST_FILE = Glovo/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.pesch.Glovo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -478,17 +504,15 @@
 		};
 		9C54BA8222367F4B002E27DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12589E117F56601277CEA1A2 /* Pods-Glovo.release.xcconfig */;
+			baseConfigurationReference = 9CC290B02236A5A700279F90 /* Release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76898M8GJ2;
-				INFOPLIST_FILE = Glovo/Info.plist;
+				INFOPLIST_FILE = Glovo/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.pesch.Glovo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
