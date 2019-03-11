@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import RealmSwift
-import GoogleMaps
 
 protocol MapInteractor {
     var presenter: MapPresenter? { get set }
@@ -16,6 +14,6 @@ protocol MapInteractor {
 
 extension Map {
     class Interactor: MapInteractor {
-        weak var presenter: MapPresenter?        
+        weak var presenter: MapPresenter?
     }
 }

@@ -21,9 +21,7 @@ protocol MapPresenter: class {
     func getCurrentLocation()
     
     func getCity(at point: CLLocationCoordinate2D) -> City?
-    func showCityMarkers()
-    func showWorkingArea(for city: City)
-    func showPolygon(for city: City)
+    func show(_ city: City)
 }
 
 //MARK: - MapPresenter
@@ -62,20 +60,18 @@ extension Map {
         }
         
         func getCity(at point: CLLocationCoordinate2D) -> City? {
-            //TODO: Pending Implementation
-            return City()
+            let cities = City.all()
+            
+            for city in cities {
+                if city.bounds?.contains(point) ?? false {
+                    return city
+                }
+            }
+            return nil
         }
         
-        func showCityMarkers() {
-            //TODO: Pending implementation
-        }
-        
-        func showWorkingArea(for city: City) {
-            //TODO: Pending implementation
-        }
-        
-        func showPolygon(for city: City) {
-            //TODO: Pending implementation
+        func show(_ city: City) {
+            router?.show(city)
         }
     }
 }

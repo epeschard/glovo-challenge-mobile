@@ -6,7 +6,9 @@
 //  Copyright © 2019 pesch.app. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// Nameclass for Localizable strings
 typealias Localized = String.Localized
+/// Nameclass for corporate colors
+typealias GlovoColor = UIColor.Glovo

@@ -21,6 +21,7 @@ class Router {
     }
     
     private func showStartView() {
+        fetchCountriesForPicker()
         showMapView(on: window)
     }
     
@@ -29,6 +30,11 @@ class Router {
     }
     
     //MARK: - MapRouter
-    weak var mapPresenter: MapPresenter?
-    weak var mapViewController: MapViewController?
+    var mapPresenter: MapPresenter?
+    var mapViewController: MapViewController?
+    
+    //MARK: - CityListRouter
+    var cityListPresenter: CityListPresenter?
+    var cityListViewController: CityListViewController?
+    var cardPresenter: CardPresenter?
 }
