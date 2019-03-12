@@ -1,9 +1,8 @@
 # Glovo Take Home Test
-by Eugène Peschard
 
 
 ## How to use it:
-1. Change the ip address [hardcoded here]("https://github.com/epeschard/glovo-challenge-mobile/blob/6b680abb620610ccbf7dcd4c0eb83ccf4c7313ef/client/Glovo/Interactor/GlovoAPIClient.swift#L112") to the ip address of your local server.
+1. Change the ip address [hardcoded here](https://github.com/epeschard/glovo-challenge-mobile/blob/6b680abb620610ccbf7dcd4c0eb83ccf4c7313ef/client/Glovo/Interactor/GlovoAPIClient.swift#L112) to the ip address of your local server.
 2. Build and run
 
 
@@ -36,4 +35,4 @@ by Eugène Peschard
 
 * Remove UIKit from Router in order to add MacOS acceptance tests for the app's flow as presented by [Remix architecture](https://github.com/dcutting/Remix)
 
-* While extracting the communication between scenes to the Router, I ended up with the CityInfo card being added twice 
+* While extracting the communication between scenes to the Router, I ended up with the CityInfo card being added twice
