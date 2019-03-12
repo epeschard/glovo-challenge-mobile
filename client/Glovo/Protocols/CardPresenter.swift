@@ -17,6 +17,12 @@ extension CardPresenter where Self: UIViewController {
     func addCard(with card: CardPresentable) {
 
         if let viewController = card as? UIViewController {
+            if let index = self.children.firstIndex(of: viewController) {
+                let cardVC = self.children[index]
+                cardVC.willMove(toParent: nil)
+                cardVC.view.removeFromSuperview()
+                cardVC.removeFromParent()
+            }
             self.addChild(viewController)
             self.view.addSubview(viewController.view)
             viewController.didMove(toParent: self)

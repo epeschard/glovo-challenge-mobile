@@ -10,7 +10,6 @@
 		9C54BA6722367F4A002E27DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA6622367F4A002E27DE /* AppDelegate.swift */; };
 		9C54BA6E22367F4B002E27DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C54BA6D22367F4B002E27DE /* Assets.xcassets */; };
 		9C54BA7122367F4B002E27DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C54BA6F22367F4B002E27DE /* LaunchScreen.storyboard */; };
-		9C54BA7C22367F4B002E27DE /* GlovoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA7B22367F4B002E27DE /* GlovoTests.swift */; };
 		9C54BA87223684BC002E27DE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54BA86223684BC002E27DE /* Router.swift */; };
 		9CA0AE2D2236CB9000622941 /* CityList.Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE262236CB8F00622941 /* CityList.Entity.swift */; };
 		9CA0AE2E2236CB9000622941 /* CityList.Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE272236CB8F00622941 /* CityList.Builder.swift */; };
@@ -30,6 +29,12 @@
 		9CA0AE482237148E00622941 /* CityInfo.Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE422237148E00622941 /* CityInfo.Presenter.swift */; };
 		9CA0AE492237148E00622941 /* CityInfo.ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE432237148E00622941 /* CityInfo.ViewController.swift */; };
 		9CA0AE4A2237148E00622941 /* CityInfo.Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE442237148E00622941 /* CityInfo.Builder.swift */; };
+		9CA0AE4C223728E400622941 /* Realm+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE4B223728E400622941 /* Realm+Tests.swift */; };
+		9CA0AE4E22379DC200622941 /* Navigable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE4D22379DC200622941 /* Navigable.swift */; };
+		9CA0AE5022379E6A00622941 /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE4F22379E6A00622941 /* Viewable.swift */; };
+		9CA0AE5222379E8F00622941 /* UIWindow+Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE5122379E8F00622941 /* UIWindow+Wireframe.swift */; };
+		9CA0AE582237A7E600622941 /* UIApplication+Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE572237A7E600622941 /* UIApplication+Wireframe.swift */; };
+		9CA0AE5A2237A80300622941 /* UIAlertController+Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0AE592237A80300622941 /* UIAlertController+Wireframe.swift */; };
 		9CC290B32236AD9100279F90 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290B22236AD9100279F90 /* Path.swift */; };
 		9CC290B52236ADB700279F90 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290B42236ADB700279F90 /* Constants.swift */; };
 		9CC290B82236AE9C00279F90 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC290B72236AE9C00279F90 /* RealmProvider.swift */; };
@@ -75,7 +80,6 @@
 		9C54BA7022367F4B002E27DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C54BA7222367F4B002E27DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C54BA7722367F4B002E27DE /* GlovoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlovoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C54BA7B22367F4B002E27DE /* GlovoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlovoTests.swift; sourceTree = "<group>"; };
 		9C54BA7D22367F4B002E27DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C54BA86223684BC002E27DE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9CA0AE262236CB8F00622941 /* CityList.Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityList.Entity.swift; sourceTree = "<group>"; };
@@ -96,6 +100,12 @@
 		9CA0AE422237148E00622941 /* CityInfo.Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.Presenter.swift; sourceTree = "<group>"; };
 		9CA0AE432237148E00622941 /* CityInfo.ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.ViewController.swift; sourceTree = "<group>"; };
 		9CA0AE442237148E00622941 /* CityInfo.Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.Builder.swift; sourceTree = "<group>"; };
+		9CA0AE4B223728E400622941 /* Realm+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Tests.swift"; sourceTree = "<group>"; };
+		9CA0AE4D22379DC200622941 /* Navigable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigable.swift; sourceTree = "<group>"; };
+		9CA0AE4F22379E6A00622941 /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
+		9CA0AE5122379E8F00622941 /* UIWindow+Wireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Wireframe.swift"; sourceTree = "<group>"; };
+		9CA0AE572237A7E600622941 /* UIApplication+Wireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Wireframe.swift"; sourceTree = "<group>"; };
+		9CA0AE592237A80300622941 /* UIAlertController+Wireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Wireframe.swift"; sourceTree = "<group>"; };
 		9CC290AF2236A59A00279F90 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9CC290B02236A5A700279F90 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		9CC290B22236AD9100279F90 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
@@ -197,7 +207,6 @@
 				9CC290C42236AF9400279F90 /* GlovoAPIClientTests.swift */,
 				9CC290C82236AFE200279F90 /* Mocks */,
 				9CC290C62236AFC000279F90 /* APIClientTests.swift */,
-				9C54BA7B22367F4B002E27DE /* GlovoTests.swift */,
 				9C54BA7D22367F4B002E27DE /* Info.plist */,
 			);
 			path = GlovoTests;
@@ -207,12 +216,12 @@
 			isa = PBXGroup;
 			children = (
 				9CA0AE272236CB8F00622941 /* CityList.Builder.swift */,
-				9CA0AE292236CB8F00622941 /* CityList.Cell.swift */,
-				9CA0AE262236CB8F00622941 /* CityList.Entity.swift */,
+				9CA0AE2A2236CB9000622941 /* CityList.ViewController.swift */,
 				9CA0AE282236CB8F00622941 /* CityList.Interactor.swift */,
 				9CA0AE2C2236CB9000622941 /* CityList.Presenter.swift */,
+				9CA0AE262236CB8F00622941 /* CityList.Entity.swift */,
 				9CA0AE2B2236CB9000622941 /* CityList.Router.swift */,
-				9CA0AE2A2236CB9000622941 /* CityList.ViewController.swift */,
+				9CA0AE292236CB8F00622941 /* CityList.Cell.swift */,
 			);
 			path = CityList;
 			sourceTree = "<group>";
@@ -221,11 +230,11 @@
 			isa = PBXGroup;
 			children = (
 				9CA0AE442237148E00622941 /* CityInfo.Builder.swift */,
+				9CA0AE432237148E00622941 /* CityInfo.ViewController.swift */,
 				9CA0AE402237148E00622941 /* CityInfo.Entity.swift */,
 				9CA0AE3F2237148E00622941 /* CityInfo.Interactor.swift */,
 				9CA0AE422237148E00622941 /* CityInfo.Presenter.swift */,
 				9CA0AE412237148E00622941 /* CityInfo.Router.swift */,
-				9CA0AE432237148E00622941 /* CityInfo.ViewController.swift */,
 			);
 			path = CityInfo;
 			sourceTree = "<group>";
@@ -306,6 +315,7 @@
 			children = (
 				9CA0AE3C2236F1E000622941 /* UIColor+Ext.swift */,
 				9CA0AE382236CCE500622941 /* UIView+Ext.swift */,
+				9CA0AE4B223728E400622941 /* Realm+Tests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -323,12 +333,12 @@
 		9CC290D32236B4EC00279F90 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				9CC290DE2236B7BF00279F90 /* Map.Builder.swift */,
 				9CC290D42236B4FF00279F90 /* Map.ViewController.swift */,
 				9CC290D62236B63000279F90 /* Map.Interactor.swift */,
 				9CC290D82236B6C200279F90 /* Map.Presenter.swift */,
 				9CC290DA2236B78400279F90 /* Map.Entity.swift */,
 				9CC290DC2236B79A00279F90 /* Map.Router.swift */,
-				9CC290DE2236B7BF00279F90 /* Map.Builder.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -339,6 +349,11 @@
 				9CA0AE342236CBF700622941 /* CardPresentable.swift */,
 				9CA0AE352236CBF700622941 /* CardPresenter.swift */,
 				9CA0AE3A2236D17400622941 /* ReusableID.swift */,
+				9CA0AE4D22379DC200622941 /* Navigable.swift */,
+				9CA0AE4F22379E6A00622941 /* Viewable.swift */,
+				9CA0AE5122379E8F00622941 /* UIWindow+Wireframe.swift */,
+				9CA0AE572237A7E600622941 /* UIApplication+Wireframe.swift */,
+				9CA0AE592237A80300622941 /* UIAlertController+Wireframe.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -557,9 +572,13 @@
 				9CA0AE392236CCE500622941 /* UIView+Ext.swift in Sources */,
 				9CC290B32236AD9100279F90 /* Path.swift in Sources */,
 				9CC290CF2236B0D800279F90 /* City.swift in Sources */,
+				9CA0AE4E22379DC200622941 /* Navigable.swift in Sources */,
 				9CA0AE3D2236F1E000622941 /* UIColor+Ext.swift in Sources */,
 				9CC290D52236B4FF00279F90 /* Map.ViewController.swift in Sources */,
+				9CA0AE5222379E8F00622941 /* UIWindow+Wireframe.swift in Sources */,
+				9CA0AE5A2237A80300622941 /* UIAlertController+Wireframe.swift in Sources */,
 				9CC290DB2236B78400279F90 /* Map.Entity.swift in Sources */,
+				9CA0AE582237A7E600622941 /* UIApplication+Wireframe.swift in Sources */,
 				9CC290DF2236B7BF00279F90 /* Map.Builder.swift in Sources */,
 				9CC290D72236B63000279F90 /* Map.Interactor.swift in Sources */,
 				9CC290D92236B6C200279F90 /* Map.Presenter.swift in Sources */,
@@ -583,12 +602,14 @@
 				9CA0AE2E2236CB9000622941 /* CityList.Builder.swift in Sources */,
 				9CA0AE462237148E00622941 /* CityInfo.Entity.swift in Sources */,
 				9CC290B82236AE9C00279F90 /* RealmProvider.swift in Sources */,
+				9CA0AE5022379E6A00622941 /* Viewable.swift in Sources */,
 				9CA0AE322236CB9000622941 /* CityList.Router.swift in Sources */,
 				9CC290C12236AF3000279F90 /* Request.swift in Sources */,
 				9CA0AE452237148E00622941 /* CityInfo.Interactor.swift in Sources */,
 				9CC290BB2236AECE00279F90 /* APIClient.swift in Sources */,
 				9CC290E32236B95C00279F90 /* String+Localizable.swift in Sources */,
 				9CA0AE362236CBF700622941 /* CardPresentable.swift in Sources */,
+				9CA0AE4C223728E400622941 /* Realm+Tests.swift in Sources */,
 				9CA0AE472237148E00622941 /* CityInfo.Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,7 +620,6 @@
 			files = (
 				9CC290C72236AFC000279F90 /* APIClientTests.swift in Sources */,
 				9CC290CA2236AFFF00279F90 /* HTTPBin.swift in Sources */,
-				9C54BA7C22367F4B002E27DE /* GlovoTests.swift in Sources */,
 				9CC290C52236AF9400279F90 /* GlovoAPIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

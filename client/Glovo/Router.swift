@@ -7,12 +7,11 @@
 //
 
 import Foundation
-import UIKit
 
 class Router {
     
-    let window: UIWindow
-    init(with window: UIWindow) {
+    var window: WindowWireframe
+    init(with window: WindowWireframe) {
         self.window = window
     }
     
@@ -25,8 +24,8 @@ class Router {
         showMapView(on: window)
     }
     
-    func show(_ view: UIViewController) {
-        window.rootViewController = view
+    func show(_ view: Viewable) {
+        window.rootView = view
     }
     
     //MARK: - MapRouter
