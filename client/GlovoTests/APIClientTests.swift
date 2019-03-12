@@ -7,7 +7,6 @@
 //
 
 import XCTest
-//@testable import Glovo
 
 class HTTPBinAPITests: XCTestCase {
     func testIPEndpoint() {
@@ -30,34 +29,22 @@ class APIClientTests: XCTestCase {
     func testGET() {
         let exp = expectation(description: "Fetch completes")
         
-        apiClient.fetchIPAddress { (ip, error) in
-            guard let ip = ip else {
+        apiClient.fetchIPAddress { (data, error) in
+            guard let data = data else {
                 XCTFail()
                 exp.fulfill()
                 return
             }
-            XCTAssert(ip.origin.count > 0)
+            let jsonObject = try! JSONSerialization.jsonObject(with: data, options: [])
+            if let json = jsonObject as? [String: String], let ip = json["origin"] {
+                XCTAssert(ip == "93.176.154.124, 93.176.154.124")
+            } else {
+                XCTFail()
+            }
             exp.fulfill()
         }
         
         waitForExpectations(timeout: 3)
     }
-    
-    
-//    func testParseIPResponse() throws {
-//        let json =
-//            """
-//{
-//  "origin": "80.34.92.76"
-//}
-//"""
-//                .data(using: .utf8)!
-//        guard let response: HTTPBin.Responses.IP = try? apiClient.parseResponse(data: json) else {
-//            XCTFail("Response threw error")
-//            return
-//        }
-//        XCTAssert(response.origin == "80.34.92.76")
-//    }
-    
     
 }

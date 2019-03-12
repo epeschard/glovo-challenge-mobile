@@ -12,25 +12,10 @@ import Foundation
 
 class HTTPBinAPIClient: APIClient {
     
-//    func fetchIPAddress(handler: @escaping(HTTPBin.Responses.IP?, Swift.Error?) -> Void) {
-//        let request: Request<HTTPBin.Responses.IP> = requestForEndpoint(HTTPBin.API.ip)
-//        self.performData(request) { (ip, error) in
-//            handler(ip, error)
-//        }
-//    }
-    
-    func fetchIPAddress(handler: @escaping(HTTPBin.Responses.IP?, Swift.Error?) -> Void) {
+    func fetchIPAddress(handler: @escaping(Data?, Swift.Error?) -> Void) {
         let request: Request<HTTPBin.Responses.IP> = requestForEndpoint(HTTPBin.API.ip)
-        performData(request) { (data, error) in
-            guard let data = data else {
-                return
-            }
-            let jsonObject = try! JSONSerialization.jsonObject(with: data, options: [])
-            if let json = jsonObject as? [String: Any] {
-//                XCTAssert(<#T##expression: Bool##Bool#>, <#T##message: String##String#>)
-            } else {
-                
-            }
+        self.performData(request) { (ip, error) in
+            handler(ip, error)
         }
     }
 }

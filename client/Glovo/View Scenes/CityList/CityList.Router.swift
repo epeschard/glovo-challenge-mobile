@@ -26,7 +26,7 @@ extension Router: CityListRouter {
     func showCard(for city: City) {
         let cityInfo = CityInfo.Builder.viewController(with: city)
         if mapViewController == nil {
-            mapViewController = window.rootViewController as? MapViewController
+            mapViewController = window.rootView as? MapViewController
         }
         mapViewController?.showWorkingArea(for: city)
         mapViewController?.addCard(with: cityInfo)        
