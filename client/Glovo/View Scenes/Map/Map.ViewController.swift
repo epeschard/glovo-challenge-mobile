@@ -10,6 +10,11 @@ import UIKit
 import GoogleMaps
 import RealmSwift
 
+enum ZoomLevel: Int {
+    case monoCity
+    case multiCity
+}
+
 protocol MapViewController: CardPresenter {
     var presenter: MapPresenter? { get set }
     var mapView: GMSMapView! { get set }
@@ -26,11 +31,8 @@ extension Map {
         var presenter: MapPresenter?
         var mapView: GMSMapView!
         
-        enum ZoomLevel: Int {
-            case monoCity
-            case multiCity
-        }
         var zoomLevel: ZoomLevel = .monoCity
+        var zoomingFromTap: Bool = false
         
         private var cities = City.all()
         private var token: NotificationToken?
@@ -133,15 +135,14 @@ extension Map {
 
 extension Map.ViewController: GMSMapViewDelegate {
     
-    func mapViewDidFinishTileRendering(_ mapView: GMSMapView) {
-        //TODO: Pending implementation
-    }
-    
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        if zoomingFromTap { return }
         if mapView.camera.zoom <= 10.0 && zoomLevel != .multiCity {
+            mapView.clear()
             zoomLevel = .multiCity
             showCityMarkers()
         } else if mapView.camera.zoom > 10.0 && zoomLevel != .monoCity {
+            mapView.clear()
             zoomLevel = .monoCity
             if let city = presenter?.getCity(at: position.target) {
                 presenter?.show(city)
@@ -150,7 +151,12 @@ extension Map.ViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        //TODO: Pending implementation
+        let realm = RealmProvider.glovo.realm
+        let cityCode = marker.snippet
+        if let city = realm.object(ofType: City.self, forPrimaryKey: cityCode) {
+            presenter?.show(city)
+        }
+        zoomingFromTap = true
         return true
     }
     

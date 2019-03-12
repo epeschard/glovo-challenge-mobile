@@ -205,7 +205,7 @@ extension CityInfo {
         }
         
         private func setup() {
-            view.backgroundColor = .clear //GlovoColor.yellow.withAlphaComponent(0.6)
+            view.backgroundColor = .clear
             addBackgroundBlur()
         }
         
