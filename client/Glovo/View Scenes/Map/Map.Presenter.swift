@@ -84,6 +84,7 @@ extension Map.Presenter: CLLocationManagerDelegate {
         guard let mostRecent = locations.last else { return }
         locationManager.stopUpdatingLocation()
         if didFindLocation { return }
+        view?.ignoreZoomChanges = true
         if let currentCity = getCity(at: mostRecent.coordinate) {
             router?.show(currentCity)
         } else {
@@ -94,7 +95,7 @@ extension Map.Presenter: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         if let host = view as? Map.ViewController {
-            router?.presentAlert(from: host, with: Localized.Map.Alert.title, and: error.localizedDescription, using: .alert, and: [UIAlertAction(title: Localized.Map.Alert.ok, style: .default, handler: nil)])
+            view?.presentAlert(from: host, with: Localized.Map.Alert.title, and: error.localizedDescription, using: .alert, and: [UIAlertAction(title: Localized.Map.Alert.ok, style: .default, handler: nil)])
         }
     }
 }

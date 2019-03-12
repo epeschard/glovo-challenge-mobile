@@ -7,12 +7,11 @@
 //
 
 import Foundation
-import UIKit
 
 enum CityList {
     class Builder {
         
-        static func viewController(for window: UIWindow) -> ViewController {
+        static func viewController(for window: WindowWireframe) -> ViewController {
             let viewController = ViewController()
             let interactor = Interactor()
             let presenter = Presenter()

@@ -18,11 +18,13 @@ enum ZoomLevel: Int {
 protocol MapViewController: CardPresenter {
     var presenter: MapPresenter? { get set }
     var mapView: GMSMapView! { get set }
+    var ignoreZoomChanges: Bool { get set }
     
     func animateMap(to coordinate: CLLocationCoordinate2D, zoom level: Float)
     func addMapMarker(with title: String, and snippet: String, at center: CLLocationCoordinate2D?)
     func showWorkingArea(for city: City)
     func showCityMarkers()
+    func presentAlert(from view: UIViewController, with title: String, and message: String, using style: UIAlertController.Style, and actions: [UIAlertAction])
 }
 
 extension Map {
@@ -32,10 +34,9 @@ extension Map {
         var mapView: GMSMapView!
         
         var zoomLevel: ZoomLevel = .monoCity
-        var zoomingFromTap: Bool = false
+        var ignoreZoomChanges: Bool = false
         
         private var cities = City.all()
-        private var token: NotificationToken?
         
         //MARK: - Initializers
         
@@ -54,29 +55,9 @@ extension Map {
             setupMapView()
         }
         
-        override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
-            
-            let realm = RealmProvider.glovo.realm
-            token = realm.observe { [weak self] notification, realm in
-                guard let self = self else { return }
-                
-                if let point = self.mapView.myLocation?.coordinate,
-                    let city = self.presenter?.getCity(at: point) {
-                    self.presenter?.show(city)
-                    self.showWorkingArea(for: city)
-                }
-            }
-        }
-        
         override func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)
             presenter?.checkLocationServices()
-        }
-        
-        override func viewWillDisappear(_ animated: Bool) {
-            super.viewWillDisappear(animated)
-            token?.invalidate()
         }
         
         //MARK: - Private - loadView
@@ -128,6 +109,22 @@ extension Map {
                 self.addMapMarker(with: city.name, and: city.code, at: city.center)
             }
         }
+        
+        func presentAlert(from view: UIViewController, with title: String, and message: String, using style: UIAlertController.Style, and actions: [UIAlertAction]) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+            _ = actions.map { alert.addAction($0) }
+            view.present(alert, animated: true) {
+                [weak self] in
+                self?.presenter?.router?.showManualCityPicker()
+            }
+        }
+        
+        @objc private func openSettings() {
+            guard let url = URL(string: UIApplication.openSettingsURLString) else {
+                fatalError("Failed to get url from UIApplication.openSettingsURLString")
+            }
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 }
 
@@ -136,7 +133,10 @@ extension Map {
 extension Map.ViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        if zoomingFromTap { return }
+        if ignoreZoomChanges {
+            ignoreZoomChanges = false
+            return
+        }
         if mapView.camera.zoom <= 10.0 && zoomLevel != .multiCity {
             mapView.clear()
             zoomLevel = .multiCity
@@ -156,7 +156,7 @@ extension Map.ViewController: GMSMapViewDelegate {
         if let city = realm.object(ofType: City.self, forPrimaryKey: cityCode) {
             presenter?.show(city)
         }
-        zoomingFromTap = true
+        ignoreZoomChanges = true
         return true
     }
     
